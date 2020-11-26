@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="karim_Project" />
+        <module name="rachid_Project" />
+        <module name="nourdine_Project" />
+        <module name="aghiles_Project" />
+        <module name="Generic" />
+        <module name="amar_Project" />
+        <module name="ibrahim_Project" />
+        <module name="team_Project" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
