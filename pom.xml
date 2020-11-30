@@ -7,9 +7,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-
     </properties>
-
     <groupId>org.example</groupId>
     <artifactId>dataDriven_testingINCucumber_NewTeam</artifactId>
     <packaging>pom</packaging>
@@ -25,43 +23,36 @@
         <module>ibrahim_Project</module>
     </modules>
     <dependencyManagement>
-
         <dependencies>
-
             <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
             <dependency>
                 <groupId>io.github.bonigarcia</groupId>
                 <artifactId>webdrivermanager</artifactId>
                 <version>3.8.1</version>
             </dependency>
-
             <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-java</artifactId>
                 <version>3.141.59</version>
             </dependency>
-
             <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-server</artifactId>
                 <version>3.141.59</version>
             </dependency>
-
             <!-- https://mvnrepository.com/artifact/org.testng/testng -->
             <dependency>
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>
                 <version>7.1.0</version>
             </dependency>
-
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>8.0.17</version>
             </dependency>
-
             <!--XLSX and XLS Reader-->
             <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
             <dependency>
@@ -174,16 +165,15 @@
                 <artifactId>cucumber-extentsreport</artifactId>
                 <version>3.1.1</version>
             </dependency>
-
+<!--            <dependency>-->
+<!--                <groupId>net.masterthought</groupId>-->
+<!--                <artifactId>maven-cucumber-reporting</artifactId>-->
+<!--                <version>5.0.0</version>-->
+<!--            </dependency>-->
         </dependencies>
-
     </dependencyManagement>
-
-
     <build>
-
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -206,40 +196,33 @@
             </plugin>
 
 
-            <plugin>
-                <groupId>net.masterthought</groupId>
-                <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.0.0</version>
-                <executions>
-                    <execution>
-                        <id>execution</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <projectName>Team 3 Cucumber Reports</projectName>
-                            <outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
-                            <buildNumber>1</buildNumber>
-                            <skip>false</skip>
-                            <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
-                            <jsonFiles>
-                                <param>**/*.json</param>
-                            </jsonFiles>
-                            <classificationDirectory>${project.build.directory}/cucumber-reports
-                            </classificationDirectory>
-                            <checkBuildResult>false</checkBuildResult>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
+<!--            <plugin>-->
+<!--                <groupId>net.masterthought</groupId>-->
+<!--                <artifactId>maven-cucumber-reporting</artifactId>-->
+<!--                <version>5.0.0</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>execution</id>-->
+<!--                        <phase>verify</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>generate</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <projectName>Team 3 Cucumber Reports</projectName>-->
+<!--                            <outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>-->
+<!--                            <buildNumber>1</buildNumber>-->
+<!--                            <skip>false</skip>-->
+<!--                            <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>-->
+<!--                            <jsonFiles>-->
+<!--                                <param>**/*.json</param>-->
+<!--                            </jsonFiles>-->
+<!--                            <classificationDirectory>${project.build.directory}/cucumber-reports-->
+<!--                            </classificationDirectory>-->
+<!--                            <checkBuildResult>false</checkBuildResult>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
-
     </build>
-
-
-
-
-
 </project>
