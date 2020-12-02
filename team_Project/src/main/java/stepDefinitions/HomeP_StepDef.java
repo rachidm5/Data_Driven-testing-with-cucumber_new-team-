@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages_and_Webelemens.*;
 
+import java.awt.*;
 import java.io.IOException;
 
 import static hooks.Hook.*;
@@ -33,6 +34,16 @@ public class HomeP_StepDef extends HomePage {
 
     @Then("User should be able to move the desired {string} in the desired {string}")
     public void user_should_be_able_to_move_the_desired_in_the_desired(String string, String string2) throws InterruptedException, IOException {
-        homePage.user_should_be_able_to_move_the_desired_in_the_desired_Test(string,string2);
+        homePage.user_should_be_able_to_move_the_desired_in_the_desired_Test("Item 1","Item 5");
+    }
+
+    @When("User clicks on Resizable link a small window with the title {string} should appear")
+    public void user_clicks_on_Resizable_link_a_small_window_with_the_title_should_appear(String string) throws AWTException, InterruptedException {
+        homePage.user_clicks_on_Resizable_link_a_small_window_with_the_title_should_appear_Test("Resizable");
+    }
+
+    @Then("User should be able to Resize the small window to a desired {string}")
+    public void user_should_be_able_to_Resize_the_small_window_to_a_desired(String string) throws InterruptedException, IOException {
+        homePage.user_should_be_able_to_Resize_the_small_window_to_a_desired_Test("Size");
     }
 }
