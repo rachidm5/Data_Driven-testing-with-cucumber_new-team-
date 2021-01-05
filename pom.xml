@@ -9,7 +9,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
     <groupId>org.example</groupId>
-    <artifactId>dataDriven_testingINCucumber_NewTeam</artifactId>
+    <artifactId>cucumber.datadriven.qa</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -20,7 +20,8 @@
         <module>karim_Project</module>
         <module>nourdine_Project</module>
         <module>aghiles_Project</module>
-        <module>ibrahim_Project</module>
+        <module>com.statefarm.project.qa</module>
+        <module>hiberNet_Project</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -51,21 +52,21 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.17</version>
+                <version>8.0.22</version>
+
             </dependency>
             <!--XLSX and XLS Reader-->
-            <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi</artifactId>
-                <version>3.17</version>
-            </dependency>
-
             <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
-                <version>3.17</version>
+                <version>4.1.2</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>4.1.2</version>
             </dependency>
 
             <!--Extent Report-->
@@ -170,7 +171,65 @@
 <!--                <artifactId>maven-cucumber-reporting</artifactId>-->
 <!--                <version>5.0.0</version>-->
 <!--            </dependency>-->
+
+<!--            hibernate dependencies-->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>5.4.27.Final</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-entitymanager</artifactId>
+                <version>5.4.27.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>xerces</groupId>
+                <artifactId>xercesImpl</artifactId>
+                <version>2.9.1</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>javax.persistence-api</artifactId>
+                <version>2.2</version>
+                <scope>compile</scope>
+            </dependency>
+   <!--    extent report cucumber -->
+            <dependency>
+                <groupId>com.aventstack</groupId>
+                <artifactId>extentreports-cucumber4-adapter</artifactId>
+                <version>1.0.10</version>
+            </dependency>
+<!--            &lt;!&ndash; https://mvnrepository.com/artifact/log4j/log4j &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>log4j</groupId>-->
+<!--                <artifactId>log4j</artifactId>-->
+<!--                <version>1.2.17</version>-->
+<!--            </dependency>-->
+            <dependency>
+                <groupId>net.masterthought</groupId>
+                <artifactId>cucumber-reporting</artifactId>
+                <version>3.8.0</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
+            </dependency>
+
+
+            <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+            <dependency>
+                <groupId>info.cukes</groupId>
+                <artifactId>cucumber-java</artifactId>
+                <version>1.1.3</version>
+            </dependency>
+
         </dependencies>
+
     </dependencyManagement>
     <build>
         <plugins>
@@ -187,42 +246,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M3</version>
+                <version>3.0.0-M5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <!--                        <suiteXmlFiles>target/test-classes/ESPNTestRunner.xml</suiteXmlFiles>-->
+<!--                        target/test-classes/AmazonTestRunner.xml-->
+<!--                    <suiteXmlFiles>target/test-classes/StateFarm_Runner.xml</suiteXmlFiles>-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
 
-
-<!--            <plugin>-->
-<!--                <groupId>net.masterthought</groupId>-->
-<!--                <artifactId>maven-cucumber-reporting</artifactId>-->
-<!--                <version>5.0.0</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>execution</id>-->
-<!--                        <phase>verify</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>generate</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <projectName>Team 3 Cucumber Reports</projectName>-->
-<!--                            <outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>-->
-<!--                            <buildNumber>1</buildNumber>-->
-<!--                            <skip>false</skip>-->
-<!--                            <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>-->
-<!--                            <jsonFiles>-->
-<!--                                <param>**/*.json</param>-->
-<!--                            </jsonFiles>-->
-<!--                            <classificationDirectory>${project.build.directory}/cucumber-reports-->
-<!--                            </classificationDirectory>-->
-<!--                            <checkBuildResult>false</checkBuildResult>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
         </plugins>
     </build>
 </project>

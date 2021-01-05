@@ -22,7 +22,7 @@ public class ConnectToSqlDB {
     public static Properties loadProperties() throws IOException {
         Properties prop = new Properties();
         //InputStream ism = new FileInputStream("/secret.properties");
-        InputStream ism = new FileInputStream("../Generic/src/main/secret.properties");
+        InputStream ism = new FileInputStream("C:\\Users\\ssbra\\IdeaProjects\\Data_Driven-testing-with-cucumber_new-team-\\Generic\\src\\main\\java\\secret.properties");
         prop.load(ism);
         ism.close();
         return prop;
@@ -40,7 +40,9 @@ public class ConnectToSqlDB {
         return connect;
     }
 
-    public List<String> readDataBase(String tableName, String columnName)throws Exception {
+
+
+    public static List<String> readDataBase(String tableName, String columnName)throws Exception {
         List<String> data = new ArrayList<String>();
 
         try {
@@ -56,7 +58,7 @@ public class ConnectToSqlDB {
         return data;
     }
 
-    private void close() {
+    public static void close() {
         try{
             if(resultSet != null){
                 resultSet.close();
@@ -72,7 +74,7 @@ public class ConnectToSqlDB {
         }
     }
 
-    private List<String> getResultSetData(ResultSet resultSet2, String columnName) throws SQLException {
+    private static List<String> getResultSetData(ResultSet resultSet2, String columnName) throws SQLException {
         List<String> dataList = new ArrayList<String>();
         while(resultSet.next()){
             String itemName = resultSet.getString(columnName);
@@ -214,17 +216,20 @@ public class ConnectToSqlDB {
             // execute the query, and get a java resultset
             ResultSet rs = st.executeQuery(query);
             // iterate through the java resultset
+
             while (rs.next())
             {
                 String name = rs.getString("stName");
+
                 String id = rs.getString("stID");
+
                 String dob = rs.getString("stDOB");
                 //System.out.format("%s, %s\n", name, id);
                 user = new User(name,id, dob);
                 list.add(user);
-
             }
             st.close();
+
         }catch (Exception e){
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
@@ -235,7 +240,9 @@ public class ConnectToSqlDB {
     public static void main(String[] args)throws IOException, SQLException, ClassNotFoundException {
         List<User> list = readUserProfileFromSqlTable();
         for(User user:list){
-            System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
+       System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
+
         }
+
     }
 }

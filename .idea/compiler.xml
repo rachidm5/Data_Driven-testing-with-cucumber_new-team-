@@ -6,15 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="com.statefarm.project.qa" />
         <module name="rachid_Project" />
+        <module name="hiberNet_Project" />
         <module name="amar_Project" />
         <module name="Generic" />
         <module name="nourdine_Project" />
         <module name="karim_Project" />
-        <module name="ibrahim_Project" />
         <module name="team_Project" />
         <module name="aghiles_Project" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aghiles_Project" target="1.8" />
+      <module name="amar_Project" target="1.8" />
+      <module name="com.statefarm.project.qa" target="1.8" />
+      <module name="cucumber.datadriven.qa" target="1.8" />
+      <module name="Generic" target="1.8" />
+      <module name="hiberNet_Project" target="1.8" />
+      <module name="karim_Project" target="1.8" />
+      <module name="nourdine_Project" target="1.8" />
+      <module name="rachid_Project" target="1.8" />
+      <module name="team_Project" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
