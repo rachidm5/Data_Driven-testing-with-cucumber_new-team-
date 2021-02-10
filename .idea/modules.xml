@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Generic/Generic.iml" filepath="$PROJECT_DIR$/Generic/Generic.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aghiles_Project/aghiles_Project.iml" filepath="$PROJECT_DIR$/aghiles_Project/aghiles_Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/amar_Project/amar_Project.iml" filepath="$PROJECT_DIR$/amar_Project/amar_Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/com.statefarm.project.qa/com.statefarm.project.qa.iml" filepath="$PROJECT_DIR$/com.statefarm.project.qa/com.statefarm.project.qa.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cucumber.datadriven.qa.iml" filepath="$PROJECT_DIR$/cucumber.datadriven.qa.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hiberNet_Project/hiberNet_Project.iml" filepath="$PROJECT_DIR$/hiberNet_Project/hiberNet_Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/karim_Project/karim_Project.iml" filepath="$PROJECT_DIR$/karim_Project/karim_Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/nourdine_Project/nourdine_Project.iml" filepath="$PROJECT_DIR$/nourdine_Project/nourdine_Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rachid_Project/rachid_Project.iml" filepath="$PROJECT_DIR$/rachid_Project/rachid_Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/team_Project/team_Project.iml" filepath="$PROJECT_DIR$/team_Project/team_Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibrahim_Project/ibrahim_Project.iml" filepath="$PROJECT_DIR$/ibrahim_Project/ibrahim_Project.iml" />
     </modules>
   </component>
 </project>
