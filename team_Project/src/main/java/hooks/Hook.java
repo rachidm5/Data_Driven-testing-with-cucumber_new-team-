@@ -26,7 +26,7 @@ public class Hook extends WebAPI {
 
     @Before
     public void SetUp() throws IOException {
-        setUp(false, "browserstack", "ox", "Big Sur", "chrome", "87", "https://jqueryui.com/draggable/");
+        setUp(false, "browserstack", "os", "catalina", "chrome", "86", "https://jqueryui.com/draggable/");
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

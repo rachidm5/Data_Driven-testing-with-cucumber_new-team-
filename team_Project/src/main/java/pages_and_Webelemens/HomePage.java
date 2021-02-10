@@ -62,7 +62,7 @@ public class HomePage extends WebAPI {
     public void user_clicks_on_Sortable_a_list_of_items_should_appear_Test() {
         Sortable_link.click();
         JavascriptExecutor js1 = (JavascriptExecutor)driver;
-        js1.executeScript("arguments[0].scrollIntoView();",Sortable_link);
+        js1.executeScript("arguments[0].scrollIntoView();",Resizable_link);
         driver.switchTo().frame(0);
 //        Sortable_Item_List.forEach( elem -> System.out.println(elem.getText()));
         for(WebElement elem:Sortable_Item_List){
@@ -84,10 +84,10 @@ public class HomePage extends WebAPI {
 
                 takeScreenshot(driver);
 //                ac.dragAndDrop(Sortable_Item_List.get(i),Item_6).release().build().perform();
-               ac.dragAndDropBy(Sortable_Item_List.get(i),X,150).release().build().perform();
+               ac.clickAndHold(Sortable_Item_List.get(i)).dragAndDropBy(Sortable_Item_List.get(i+2),X,100).release().build().perform();
 //             ac.clickAndHold(Sortable_Item_List.get(i)).moveByOffset(X,Y).release().build().perform();
                 takeScreenshot(driver);
-                Thread.sleep(5000);
+                Thread.sleep(7000);
                 break;
             }
 

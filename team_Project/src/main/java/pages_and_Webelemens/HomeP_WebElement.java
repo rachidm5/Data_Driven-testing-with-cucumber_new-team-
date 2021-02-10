@@ -19,9 +19,15 @@ public class HomeP_WebElement {
     public static final String Sortable_Item_List_XPATH="//li[@class='ui-state-default ui-sortable-handle']";
     @FindBy(how=How.XPATH, using=Sortable_Item_List_XPATH)
     public static List<WebElement> Sortable_Item_List;
-    public static final String Item_6_XPATH="//li[@class='ui-state-default ui-sortable-handle'][6]";
+    public static final String Item_1_XPATH="//li[contains(text(),'Item 1')]";
+    @FindBy(how=How.XPATH, using=Item_1_XPATH)
+    public static WebElement Item_1;
+    public static final String Item_6_XPATH="//li[contains(text(),'Item 6')]";
     @FindBy(how=How.XPATH, using=Item_6_XPATH)
     public static WebElement Item_6;
+    public static final String Resizable_link_LinkText="Resizable";
+    @FindBy(how=How.LINK_TEXT, using=Resizable_link_LinkText)
+    public static WebElement Resizable_link;
 
-
+//li[@class='ui-state-default ui-sortable-handle'][1]
 }
