@@ -1,5 +1,6 @@
 package common;
 
+import io.cucumber.testng.CucumberOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,9 +35,10 @@ public class WebAPI {
     public String saucelabs_accesskey = "";
 
 
-    public void setUp(boolean useCloudEnv, String cloudEnvName,
+
+    public void setUp(Boolean useCloudEnv, String cloudEnvName,
                       String os, String os_version, String browserName,
-                              String browserVersion, String url) throws IOException {
+                      String browserVersion, String url) throws IOException {
 
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserstack")) {
@@ -780,6 +782,11 @@ public class WebAPI {
         boolean flag = compareTextListToExpectedStringArray(actualURLs, path, sheetName);
 
         return flag;
+    }
+
+    // navigatBackWindow
+    public void navigatebackWindow() {
+        driver.navigate().back();
     }
 
 }
